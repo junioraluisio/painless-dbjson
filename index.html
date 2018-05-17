@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Painless :: DB Json</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="title">Formador de JSon das tabelas do Painless</h1>
+        </div>
+    </div>
+    <form action="#" class="" id="form">
+        <div class="form-group row">
+            <label for="name_msg" class="col-2 col-form-label">Nome</label>
+            <div class="col-10">
+                <input class="form-control" type="text" value="" id="name_msg" name="name_msg" aria-describedby="name_msg_help">
+                <p id="name_msg_help" class="form-text text-muted">Nome do campo que será apresentado para interação com o usuário.</p>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="validate" class="col-2 col-form-label">Validação</label>
+            <div class="col-10">
+                <select class="form-control" name="validate" id="validate" aria-describedby="validate_help">
+                    <option value=""></option>
+                    <option value="auto_increment">Auto incremento</option>
+                    <option value="cpf">CPF</option>
+                    <option value="date">Data</option>
+                    <option value="date_automatic">Data automática</option>
+                    <option value="email">Email</option>
+                    <option value="flag">Flag</option>
+                    <option value="float">Float</option>
+                    <option value="fk">Foreng key</option>
+                    <option value="integer">Integer</option>
+                    <option value="login">Login</option>
+                    <option value="memo">Memo</option>
+                    <option value="password">Password</option>
+                    <option value="string">String</option>
+                    <option value="token_user">Token</option>
+                </select>
+                <p id="validate_help" class="form-text text-muted">Informa os parâmetros para validação do campo.</p>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="validate_ref" class="col-2 col-form-label">Referência</label>
+            <div class="col-10">
+                <select class="form-control" name="validate_ref" id="validate_ref" aria-describedby="validate_ref_help">
+                    <option value=""></option>
+                    <option value="flag">Flag</option>
+                    <option value="jwt">JWT</option>
+                    <option value="token">Token</option>
+                </select>
+                <p id="validate_ref_help" class="form-text text-muted">String que informa a qual campo a validação faz referência.</p>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="insert" class="col-2 col-form-label">Insert</label>
+            <div class="col-10">
+                <select class="form-control" name="insert" id="insert" aria-describedby="insert_help">
+                    <option value=""></option>
+                    <option value="true">True</option>
+                    <option value="false">False</option>
+                </select>
+                <p id="insert_help" class="form-text text-muted">Valor booleano que informa se o campo estará disponível em páginas de inserção de registro.</p>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="update" class="col-2 col-form-label">Update</label>
+            <div class="col-10">
+                <select class="form-control" name="update" id="update" aria-describedby="update_help">
+                    <option value=""></option>
+                    <option value="true">True</option>
+                    <option value="false">False</option>
+                </select>
+                <p id="update_help" class="form-text text-muted">Valor booleano que informa se o campo estará disponível em páginas de alteração de registro.</p>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="comment" class="col-2 col-form-label">Comentário</label>
+            <div class="col-10">
+                <input class="form-control" type="text" value="" id="comment" name="comment" aria-describedby="comment_help">
+                <p id="comment_help" class="form-text text-muted">Armazena o comentário do campo.</p>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <a href="#" class="btn btn-primary" id="btnAction">Converter</a>
+            </div>
+            <div class="col-2">
+                <button type="reset" class="btn btn-danger" id="btnReset">Limpar</button>
+            </div>
+            <div class="col-2">
+
+            </div>
+        </div>
+    </form>
+
+    <div class="col-12">
+        <label for="return_json" class="sr-only">Comentário</label>
+        <div class="input-group input-group-right">
+            <input type="text" id="return_json" name="return_json" class="form-control" readonly/>
+            <button type="reset" class="btn btn-success" id="btnCopy">Copiar</button>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

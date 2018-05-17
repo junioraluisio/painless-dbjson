@@ -1,0 +1,19 @@
+.title{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.form-align-right .form-group label{
+    text-align: right !important;
+}
+
+.input-group-right input{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.input-group-right .btn{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
